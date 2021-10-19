@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'dashboard',
+    'send_mail'
 ]
 
 MIDDLEWARE = [
@@ -86,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'kitchen',
         'USER': 'kitchen_management',
-        'PASSWORD': 'akirachix2021',
+        'PASSWORD':'akirachix2021',
         'HOST': 'localhost',
         'PORT': '',
     }
