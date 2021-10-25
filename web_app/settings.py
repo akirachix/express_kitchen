@@ -39,9 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'Login',
     'Stock',
     
+=======
+    'dashboard',
+    'send_mail'
+>>>>>>> 7dbaeda409fd651424d79e9aaad8efef73ab6d55
 ]
 
 MIDDLEWARE = [
@@ -90,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'kitchen',
         'USER': 'kitchen_management',
-        'PASSWORD': 'akirachix2021',
+        'PASSWORD':'akirachix2021',
         'HOST': 'localhost',
         'PORT': '',
     }
