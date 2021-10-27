@@ -38,15 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'Login',
-    'Stock',
-    
-=======
+    'django.contrib.staticfiles',                  
     'dashboard',
-    'send_mail'
->>>>>>> 7dbaeda409fd651424d79e9aaad8efef73ab6d55
+    'stock',
+    'product',
+    'orders',
+    'menu',
+    'crispy_forms',
+    'accounts',
+    'django_filters',
+    
+   
+
+    
+   
+
+    
 ]
 
 MIDDLEWARE = [
