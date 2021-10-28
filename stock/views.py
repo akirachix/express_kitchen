@@ -1,5 +1,5 @@
 from django.http import request
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .forms import AddStockForm
 from .models import Stock
 
@@ -40,4 +40,4 @@ def edit_stock(request,id):
 def delete_stock(request,id):
     stock=Stock.objects.get(id=id)
     stock.delete()
-    return redirect(stock_list)
+    return redirect(stock)

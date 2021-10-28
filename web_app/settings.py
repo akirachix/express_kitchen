@@ -48,12 +48,6 @@ INSTALLED_APPS = [
     'accounts',
     'django_filters',
     
-   
-
-    
-   
-
-    
 ]
 
 MIDDLEWARE = [
@@ -67,6 +61,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'web_app.urls'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 TEMPLATES = [
     {
@@ -148,19 +144,28 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/images/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-LOGIN_REDIRECT_URL='/login'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'wangarraakoth@gmail.com'
+EMAIL_HOST_PASSWORD ='your email password'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'express_kitchen@gmail.com'
-EMAIL_HOST_PASSWORD = os.getenv('Password')
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 django_heroku.settings(locals())
