@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base</title>
+</head>
+<body>
+    <ul class="mytop-nav">
+        <li class=" nav-li"><a href="{% url 'dashboard:dashboard_views' %}">Dashboard</a></li>
+        <li class=" nav-li"><a href="{% url 'stock:stock_views' %}">Stock</a></li>
+        <li class=" nav-li"><a href="{% url 'menu:menu_views' %}">Menu</a></li>
+        <li class=" nav-li"><a href="{% url 'orders:order_views' %}">Orders</a></li>
+    
+        
+     </ul>
+     <style>
+
+    .mytop-nav{
+        letter-spacing: none;
+        margin: -8px;
+        padding-left: 20px;
+        width: 200px;
+        height: 100%;
+        background-color:#812990;
+        position: fixed;
+        list-style: none;
+        margin-top: -21px;
+           }
+
+   .nav-li a{
+        display: block;
+        width: 150px;
+        color:white;
+        text-decoration: none;
+        font-size: 20px;
+        padding-bottom: -20px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        padding: 12px 16px;
+        
+        
+    }
+    .nav-li a:hover{
+        background-color: antiquewhite;
+        color:black;
+       
+    } 
+    .heading{
+        margin-left: 400px;
+        font-size: 70px;
+        padding-top: 80px;
+    }
+</style>
+
+</body>
+</html>
