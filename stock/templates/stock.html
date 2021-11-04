@@ -33,6 +33,7 @@
            <td>{{stock.total_price}}</td>
            <td><a href="{% url 'stock:edit_stock' id=stock.id%}">Edit</a></td>
            <td><a href="{% url 'stock:delete_stock' id=stock.id}">Delete</a></td>
+           <td><a href="{% url 'stock_detail' instance.id %}">{{instance.quantity}}</a></td>
        </tr>
        {% endfor %}
    </table>
@@ -74,3 +75,13 @@
 </body>
  
 </html>
+
+
+
+
+
+
+
+
+
+
