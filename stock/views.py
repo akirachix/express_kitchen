@@ -38,9 +38,28 @@ def edit_stock(request,id):
    else:
        form=AddStockForm(instance=stock)
    return render(request,'edit_stock.html',{"form":form})
+
 def delete_stock(request,id):
    stock=Stock.objects.get(id=id)
    stock.delete()
    return redirect(stock)
 
 
+def list_item(request):
+    title = 'List of Items'
+    queryset = Stock.objects.all()
+    context = {
+		"title": title,
+		"queryset": queryset,
+	}
+    return render(request, "list_item.html", context)
+
+
+
+def stock_detail(request, pk):
+    queryset = Stock.objects.get(id=pk)
+    context = {
+		"title": queryset.item_name,
+		"queryset": queryset,
+	}
+    return render(request, "stock_detail.html", context)
